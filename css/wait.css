@@ -1,0 +1,358 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    color: rgb(85, 85, 85);
+    font-size: 20px;
+    padding-top: 5vh;
+    width: 25em;
+    text-align: justify;
+}
+
+p:after {
+    /* this adds an extra invisible line, so any other line is justified */
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+/* DESKTOP NAV */
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 20vh;
+    padding-top: 10vh;
+    padding-bottom: 200px;
+}
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.section__text {
+    padding-top: 0;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.skills {
+    font-size: 20px;
+    color: white;
+}
+
+.education {
+    font-size: 20px;
+    color: white;
+}
+
+#skillsEducation {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    border: 1px solid black;
+    padding: 20px;
+    width: 50%;
+    height: auto;
+    background-color: black;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.6);
+}
+
+.foot {
+    color: white;
+    font-size: 20px;
+    padding-top: 0;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+}
+
+.sectioned {
+    width: 50%; /* Adjusts the length of the line */
+    margin: 20px auto; /* Centers it horizontally */
+}
+
+h2 {
+    text-align: center;
+}
+
+.p {
+    font-size: 20px;
+    padding-top: 5vh;
+    width: 25em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.p:after {
+    /* this adds an extra invisible line, so any other line is justified */
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+#hobbies ul {
+    text-align: center;
+    margin: 2rem;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#contact ul {
+    text-align: center;
+    margin: 2rem;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.me {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+#contact {
+    text-align: center; /* Centers content horizontally */
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: #333;
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.email a {
+    text-decoration: none;
+}
+
+@media (max-width: 980px) {
+    /* Adjust paragraph width and font size */
+    p {
+        width: 90%; /* Make paragraphs take up most of the screen */
+        font-size: 16px; /* Slightly smaller font for mobile */
+        padding-top: 2vh; /* Reduce padding */
+        text-align: center;
+    }
+
+    /* Center text in the .centre class */
+    .centre {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically if the container has a height */
+        text-align: center; /* Center text inside the elements */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .centre h1 {
+        font-size: 24px; /* Adjust the size of the heading for mobile */
+    }
+
+    .centre p {
+        font-size: 20px; /* Adjust paragraph font size */
+        color: black;
+    }
+
+    /* Adjust profile section */
+    #profile {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 2rem; /* Reduce gap */
+        padding-top: 5vh; /* Reduce padding */
+        padding-bottom: 100px; /* Reduce padding */
+        text-align: center; /* Center text */
+        margin-top: 10vh;
+    }
+
+    /* Adjust skills and education section */
+    #skillsEducation {
+        width: 90%; /* Make it take up most of the screen */
+        flex-direction: column; /* Stack items vertically */
+        gap: 2rem; /* Reduce gap */
+        padding: 10px; /* Reduce padding */
+        margin-top: 90px; /* Add margin to avoid overlap */
+    }
+}
+  
+/* Your existing mobile styles (unchanged) */
+@media (max-width: 480px) {
+    /* Adjust paragraph width and font size */
+    p {
+        width: 90%; /* Make paragraphs take up most of the screen */
+        font-size: 16px; /* Slightly smaller font for mobile */
+        padding-top: 2vh; /* Reduce padding */
+        text-align: center;
+    }
+
+    /* Center text in the .centre class */
+    .centre {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically if the container has a height */
+        text-align: center; /* Center text inside the elements */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .centre h1 {
+        font-size: 24px; /* Adjust the size of the heading for mobile */
+    }
+
+    .centre p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+
+    /* Adjust profile section */
+    #profile {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 2rem; /* Reduce gap */
+        padding-top: 5vh; /* Reduce padding */
+        padding-bottom: 100px; /* Reduce padding */
+        text-align: center; /* Center text */
+        margin-top: 10vh;
+    }
+
+    /* Adjust skills and education section */
+    #skillsEducation {
+        width: 90%; /* Make it take up most of the screen */
+        flex-direction: column; /* Stack items vertically */
+        gap: 2rem; /* Reduce gap */
+        padding: 10px; /* Reduce padding */
+        margin-top: 90px; /* Add margin to avoid overlap */
+    }
+
+    /* Adjust hobbies and contact sections */
+    #hobbies ul,
+    #contact ul {
+        font-size: 16px; /* Smaller font size */
+        margin: 1rem; /* Reduce margin */
+    }
+
+    /* Adjust image size */
+    .me {
+        height: 180px;
+        width: 180px;
+        margin-top: 50px;
+    }
+
+    /* Adjust button size */
+    .btn {
+        font-size: 16px; /* Smaller font size */
+        padding: 8px 16px; /* Smaller padding */
+    }
+
+    /* Adjust footer */
+    .foot {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    /* Adjust socials container */
+    #socials-container {
+        margin-top: 2rem; /* Add margin to avoid overlap */
+    }
+}
